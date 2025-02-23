@@ -1,0 +1,158 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background 0.3s ease-in-out;
+}
+
+.container {
+    margin: 50px auto;
+    background: rgb(225, 217, 217);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    width: 34px;
+    height: 20px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+
+.input-container {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+button {
+    padding: 8px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background: #f3f3f3;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    cursor: grab;
+    transition: 0.3s;
+    position: relative;
+}
+
+li:hover {
+    background: #e0e0e0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #333;
+}
+
+.dark-mode li {
+    background: #555;
+    color: white;
+}
+
+.dark-mode button {
+    background: #ff7b00;
+}
