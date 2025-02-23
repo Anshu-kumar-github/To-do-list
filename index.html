@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Smart To-Do List 📝</h2>
+        
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitcher">
+                <span class="slider"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="task" placeholder="Enter task">
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Urgent">Urgent</option>
+            </select>
+            <input type="date" id="dueDate">
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+        <button id="clearAll" onclick="clearAllTasks()">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
